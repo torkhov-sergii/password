@@ -1,0 +1,300 @@
+
+.wysiwyg__container, .block-article .article__body {
+
+  img {
+    margin: 20px 0;
+    max-width: 100%;
+  }
+
+  .text__hightlight {
+    //font-family: play_regular;
+    font-size: 15px !important;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #066f93;
+    font-weight: normal;
+    color: #066f93;
+
+    p {
+      font-size: 17px;
+      font-family: play_regular;
+    }
+
+    i {
+      font-style: normal !important;
+    }
+
+    span {
+      font-size: 17px !important;
+    }
+  }
+
+  .text__quote {
+    position: relative;
+    margin: 30px 0;
+    padding: 30px 0;
+    text-align: center;
+    font-family: georgia;
+    font-size: 17px;
+    font-style: italic;
+    border-top: 1px solid #066f93;
+    border-bottom: 1px solid #066f93;
+    font-weight: normal;
+
+    p {
+      font-size: 17px;
+      font-style: italic;
+      font-family: georgia;
+    }
+
+    &:before {
+      position: absolute;
+      top: -20px;
+      left: 0;
+      content: '';
+      width: 70px;
+      height: 40px;
+      width: 100%;
+      text-align: center;
+      background: url('../images/articles/quote-top.png') center no-repeat;
+    }
+
+    &:after {
+      position: absolute;
+      bottom: -20px;
+      left: 0;
+      content: '';
+      width: 70px;
+      height: 40px;
+      width: 100%;
+      text-align: center;
+      background: url('../images/articles/quote-bottom.png') center no-repeat;
+    }
+  }
+
+  .text__attention {
+    position: relative;
+    margin: 30px 0;
+    padding: 30px;
+    font-family: play_regular;
+    font-size: 16px;
+    border-left: 4px solid #017aa3;
+    background-color: rgba(1,122,163,.05);
+    font-weight: normal;
+
+    p {
+      font-size: 14px;
+      font-family: play_regular;
+    }
+
+    &:after {
+      content: '';
+      background: url("/images/attention_icon.png");
+      width: 31px;
+      height: 31px;
+      position: absolute;
+      left: -17px;
+      //top: 50%;
+      top: -5px;
+      //margin-top: -15px;
+    }
+
+    &.m__green {
+      border-left: 4px solid #56ae73;
+      background-color: rgba(203, 241, 199,0.3);
+
+      &:after {
+        background: url("/images/attention_icon_green.png");
+      }
+    }
+
+    &.m__orange {
+      border-left: 4px solid #ff7700;
+      background-color: rgba(255, 246, 220,0.5);
+
+      &:after {
+        background: url("/images/attention_icon_orange.png");
+      }
+    }
+
+    &.m__gray {
+      border-left: 4px solid #7a7a7a;
+      background-color: rgba(239, 239, 239,0.9);
+
+      &:after {
+        background: url("/images/attention_icon_gray.png");
+      }
+    }
+  }
+
+  .img-popup {
+    display: block;
+    position: relative;
+    text-align: center;
+    margin: 50px auto;
+
+    div.img__wrapper {
+      position: relative;
+      display: inline-block;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+      border-radius: 6px;
+
+      img {
+        max-width: 100%;
+        //box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+        border-radius: 6px;
+        margin: 0;
+        width: auto !important;
+      }
+
+      i {
+        position: absolute;
+        top: -15px;
+        right: -15px;
+        width: 35px;
+        height: 35px;
+        border-radius: 50%;
+        border: 3px solid white;
+        background: #d6d6d6 url('../images/articles/zoom.png') center no-repeat;
+        cursor: hand;
+        cursor: pointer;
+        transition: 0.3s;
+
+        &:hover {
+          top: -18px;
+          right: -17px;
+          width: 40px;
+          height: 40px;
+          transition: 0.3s;
+        }
+      }
+    }
+  }
+
+  h1, h2, h3, h4 {
+    font-family: 'play_regular', sans-serif;
+    color: $prozorro-color;
+    text-align: left !important;
+    margin-top: 50px;
+    font-weight: normal;
+
+    b {
+      font-weight: normal;
+    }
+  }
+  h1 {
+    margin: 0;
+    padding: 0;
+    font-weight: normal;
+  }
+  h2 {
+    margin-top: 40px;
+  }
+  h3 {
+    margin-top: 30px;
+  }
+  h4 {
+    margin-top: 20px;
+  }
+
+  a:not(.button) {
+    color: #066f93;
+
+    &[target=_blank] {
+      position: relative;
+      margin-right: 16px;
+
+      &:after {
+        content: '\e900';
+        font-family: iconmoon;
+        font-size: 11px;
+        position: absolute;
+        //bottom: 0;
+        //right:  0;
+        margin-left: 2px;
+        color: #666;
+        text-decoration: none;
+        padding-bottom: 2px;
+        transform: translateY(-3px);
+      }
+
+      @-moz-document url-prefix() {
+        margin-right: 0px;
+
+        &:after {
+          display: none;
+        }
+      }
+    }
+  }
+
+  table {
+    border: 0;
+
+    tr {
+
+      &:nth-of-type(2n+1) {
+        background: #f0f5f2;
+      }
+
+      &:first-child {
+        background: #23a6da;
+        text-align: center;
+        color: #fff;
+      }
+
+      td {
+        border: none;
+      }
+    }
+
+    &.green {
+      tr {
+        &:first-child {
+          background: #56ae73 !important;
+        }
+        &:nth-of-type(2n+1) {
+          background: rgba(86, 174, 115, 0.06);
+        }
+      }
+    }
+
+    &.orange {
+      tr {
+        &:first-child {
+          background: #ff7700 !important;
+        }
+        &:nth-of-type(2n+1) {
+          background: rgba(255, 119, 0, 0.05);
+        }
+      }
+    }
+  }
+}
+
+
+//remove styles from dropdown in editor
+.dropdown-style .dropdown-item {
+
+  //фикс бага - если кликнуть на стиль скраю, то вешается не верный класс
+  padding: 0;
+  p, h1, h2, h3, h4 {
+    padding: .7rem 1.2rem !important;
+  }
+
+  .text__hightlight, .text__quote, .text__attention {
+    margin: 0;
+    padding: 0;
+    color: #333;
+    font-size: 15px;
+    font-family: 'verdana', sans-serif;
+    border: 0;
+    background: none;
+    text-align: left;
+    text-decoration: none;
+    font-style: normal;
+
+    &:before, &:after {
+      display: none;
+    }
+  }
+}

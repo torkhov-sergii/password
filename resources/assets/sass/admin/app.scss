@@ -1,0 +1,26 @@
+// p - page (уникальная страница)
+// b - block (стандартный блок, может быть в разных частях приложения)
+// m - modificator (модификатор страницы или блока)
+
+//nesting example
+//b__about-us m__black
+//  about-us__wrapper
+//    about-us__title
+//    about-us__description
+//      description__first
+//      description__second
+
+@import 'variables';
+
+@import 'mixins';
+
+@import "../variables";
+@import "additionally";
+@import "fonts";
+@import "forms";
+@import 'layout';
+@import 'media';
+@import 'styles';
+@import "pages_blocks";
+@import "../wising_editor";
+@import "../icons";

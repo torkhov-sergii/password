@@ -1,0 +1,123 @@
+//bottom block with courses slider
+.block-courses {
+
+  .block-courses__title {
+    text-align: center;
+    font-size: 28px;
+    color: #598527;
+    margin: 50px 0;
+  }
+
+  .block-courses__small-title {
+    text-align: center;
+    font-size: 15px;
+    margin-bottom: 50px;
+  }
+
+  .block-courses__description {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
+    text-align: center;
+    margin-bottom: 110px;
+  }
+
+  .block-courses__courses-grid {
+    display: flex;
+    justify-content: center;
+    max-width: 900px;
+    margin: 0 auto;
+
+    .owl-nav {
+      display: block !important;
+
+      .owl-prev, .owl-next {
+        position: absolute;
+        top: 115px;
+        width: 35px;
+        height: 62px;
+      }
+
+      .owl-prev {
+        left: -30px;
+        background: url('../images/nav-left-dark.png') center no-repeat;
+
+        @media screen and (max-width: 1281px) {
+          left: 30px;
+        }
+      }
+
+      .owl-next {
+        right: -30px;
+        background: url('../images/nav-right-dark.png') center no-repeat;
+
+        @media screen and (max-width: 1281px) {
+          right: 30px;
+        }
+      }
+    }
+
+    .block-course {
+      display: block;
+      max-width: 250px;
+      margin: 0 auto;
+      text-decoration: none;
+      color: #333;
+
+      > div {
+        text-align: center;
+      }
+
+      .block-course__image {
+        height: 125px;
+
+        img {
+          max-width: 100px;
+          max-height: 80px;
+          margin: 0 auto;
+          object-fit: contain;
+        }
+      }
+
+      .block-course__title {
+        font-size: 16px;
+        margin-bottom: 5px;
+      }
+
+      .block-course__for {
+        font-size: 13px;
+        color: #598527;
+        margin-bottom: 10px;
+      }
+
+      .block-course__text {
+        font-size: 13px;
+        margin-bottom: 10px;
+      }
+
+      .block-course__length {
+        font-family: verdana;
+        font-weight: 600;
+        font-size: 12px;
+      }
+    }
+  }
+
+  .button-container {
+    margin: 80px auto;
+  }
+
+  @media screen and (max-width: $mobile-width) {
+    width: 100%;
+
+    .block-courses__courses-grid {
+      margin-top: 50px;
+    }
+
+    .button-container {
+      a {
+        font-size: 12px;
+      }
+    }
+  }
+}

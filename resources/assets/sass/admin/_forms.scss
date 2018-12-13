@@ -1,0 +1,26 @@
+.btn {
+  font-family: Roboto;
+
+  &.btn-xs {
+    padding: 1px 0.5rem;
+    font-weight: 100;
+    font-size: 0.9rem;
+
+    i {
+      top: 1px;
+      position: relative;
+      margin-right: 2px;
+    }
+  }
+
+  &.btn-secondary {
+    color: #333;
+  }
+
+  //fix style for summernote button
+  &.btn-light {
+    color: #333;
+    background-color: #fff;
+    border-color: #ccc;
+  }
+}

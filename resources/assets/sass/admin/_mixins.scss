@@ -1,0 +1,39 @@
+
+/********************** изменить расстояние между колонками bootstrap .row {@include no-gutters(50px);} ***************************/
+@mixin no-gutters ($size: 0px) {
+    //&.row {
+    @include media-breakpoint-up(sm) {
+        margin-right: -$size;
+        margin-left: -$size;
+
+        & > [class^="col-"],
+        & > [class*=" col-"] {
+            padding-right: $size;
+            padding-left: $size;
+        }
+    }
+    //}
+}
+
+//font size - rem. @include font-size(14px)
+@function calculateRem($size) {
+    $remSize: $size / 16px;
+    @return $remSize * 1rem;
+}
+@mixin font-size($size) {
+    font-size: $size;
+    font-size: calculateRem($size);
+}
+
+.clearfix{
+    zoom: 1;
+
+    &:after {
+        clear: both;
+        content: ".";
+        display: block;
+        font-size: 0;
+        height: 0;
+        line-height: 0;
+    }
+}

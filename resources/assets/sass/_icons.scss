@@ -1,0 +1,73 @@
+@font-face {
+  font-family: 'iconmoon';
+  src:  url('../fonts/iconmoon.eot?inx1p7');
+  src:  url('../fonts/iconmoon.eot?inx1p7#iefix') format('embedded-opentype'),
+  url('../fonts/iconmoon.ttf?inx1p7') format('truetype'),
+  url('../fonts/iconmoon.woff?inx1p7') format('woff'),
+  url('../fonts/iconmoon.svg?inx1p7#iconmoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'iconmoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-external-link-alt:before {
+  content: "\e900";
+}
+
+
+
+i {
+  &.f-home::before {
+    content: url('/images/dashboard/home.png');
+  }
+
+  &.f-disk::before {
+    content: url('/images/dashboard/disk.png');
+  }
+
+  &.f-album::before {
+    content: url('/images/dashboard/album.png')
+  }
+
+  &.f-video::before {
+    content: url('/images/dashboard/video.png');
+  }
+
+  &.f-comp::before {
+    content: url('/images/dashboard/trophy.png');
+  }
+
+  &.f-account::before {
+    content: url('/images/dashboard/account.png');
+  }
+
+  &.f-message::before {
+    content: url('/images/dashboard/message.png');
+  }
+
+  &.f-settings::before {
+    content: url('/images/dashboard/settings.png');
+  }
+
+  &.f-earn::before {
+    content: url('/images/dashboard/earn.png');
+  }
+
+  &.f-invoice::before {
+    content: url('/images/dashboard/invoice.png');
+  }
+}

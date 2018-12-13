@@ -1,0 +1,23 @@
+html {
+
+}
+
+body {
+  &.page-guest {
+    .b-header, .b-footer {
+      display: none;
+    }
+  }
+}
+
+header.header {
+
+}
+
+section.content {
+
+}
+
+footer.footer {
+
+}

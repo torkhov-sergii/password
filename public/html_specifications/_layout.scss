@@ -1,0 +1,31 @@
+html {
+
+}
+
+body {
+  margin: $navigation-bar-height 0 0 0;
+  font-family: 'play_regular', sans-serif;
+  min-width: 320px;
+}
+
+header.header {
+
+}
+
+.content {
+
+}
+
+footer.footer {
+
+}
+
+.container {
+  position: relative;
+  max-width: 1366px;
+  margin: auto;
+
+  @media screen and (max-width: 1446px) {
+    margin: 0 30px;
+  }
+}

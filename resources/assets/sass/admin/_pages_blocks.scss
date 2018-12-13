@@ -1,0 +1,616 @@
+
+//login
+.m-login.m-login--2.m-login--signin {
+  .m-login__forget-password, .m-login__signup {
+    display: block;
+  }
+}
+
+//page content
+.m-grid__item {
+  //central container
+  &.m-wrapper {
+    .m-subheader {
+
+    }
+
+    .m-content {
+      .m-portlet {
+        .m-portlet__head {
+          .m-portlet__head-caption {
+            font-size: 1.3rem;
+            font-weight: 500;
+            font-family: Roboto;
+
+            i {
+              color: #333;
+              margin-right: 10px;
+            }
+          }
+
+          .m-portlet__head-tools {
+            a {
+              margin-left: 20px;
+            }
+          }
+        }
+
+        .m-portlet__body {
+          .form-body {
+            .form-group {
+              display: flex;
+              flex-wrap: wrap;
+              margin-bottom: 30px;
+
+              .control-label {
+                text-align: right;
+                font-weight: 400;
+                font-size: 1.3rem;
+              }
+            }
+          }
+
+          .m-form__actions {
+            margin: 50px -2.2rem 0 -2.2rem;
+            border-top: 1px solid #ebedf2;
+            padding: 25px 2.2rem 0 2.2rem;
+          }
+        }
+      }
+    }
+  }
+
+  //left menu
+  &.m-aside-left {
+    .m-aside-menu {
+      .m-menu__nav {
+        .m-menu__item {
+          .m-menu__link {
+            .m-menu__link-icon {
+              color: #b0b7ce;
+            }
+          }
+
+          &.m-menu__item--active {
+            >.m-menu__link {
+              .m-menu__link-icon {
+                color: #716aca !important;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+//datatables
+table.dataTable {
+  border-collapse: collapse !important;
+}
+
+//alert (Flash)
+.alert {
+  margin-bottom: 40px;
+}
+
+//tabs
+.m-tabs-line .m-tabs__link {
+  border: 0;
+  border-bottom: 1px solid transparent;
+  padding: 12px 0;
+  font-size: 1.1rem;
+  font-weight: 400;
+}
+
+//дублирование полей
+.b-add-more-images, .b-add-more-files {
+  #input_fields_wrap {
+    div {
+      @extend .clearfix;
+      border-bottom: 1px dashed #ccc;
+      padding: 10px 0px 10px 0px;
+
+      input {
+        float: left;
+      }
+
+      .remove_field {
+        float: left;
+      }
+    }
+  }
+
+  #add_field_button {
+    display: inline-block;
+    margin: 10px 0px 0px 0px;
+  }
+}
+
+//кропалка аватарок
+.b-fileuploader-crop {
+  #fileuploader_crop {
+    //max-width: 300px;
+    width: 100%;
+    max-width: 250px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    //background-image: url("/i/admin/icon_add_image.png");
+    position: relative;
+
+    img {
+      //max-width: 100%;
+      width: 100%;
+    }
+
+    .fileuploader_crop_container {
+      position: absolute;
+      top:0px;
+      left:0px;
+      width: 100%;
+      height: 100%;
+      z-index: 50;
+
+      .ajax-file-upload {
+        width: 100%;
+        height: 100%;
+        background: none;
+        box-shadow: 0 0px 0 0 #13648d;
+      }
+
+      .ajax-file-upload-error {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+        text-align: center;
+        color: #b50000;
+        justify-content: center;
+      }
+    }
+
+    &:hover {
+      background-color: #eee;
+    }
+
+    &.m-fileuploader_crop-empty {
+      width: 100px;
+      height: 100px;
+    }
+  }
+
+  .ajax-file-upload-container {
+    display: none;
+  }
+}
+
+.jcrop-keymgr {
+  display: none !important;
+}
+
+//перечень подгруженых картинок и файлов
+.b-images, .b-files {
+  h5 {
+    margin-top: 30px;
+    font-weight: bold;
+  }
+
+  .image-container, .file-container {
+    @extend .clearfix;
+    border-bottom: 1px dashed #ccc;
+    padding: 10px 0px 10px 0px;
+
+    img {
+      margin-right: 20px;
+      width: 100px;
+    }
+
+    .image_alt {
+      width: 400px;
+      margin-right: 10px;
+      padding-left: 10px;
+    }
+
+    .glyphicon {
+      font-size: 15px;
+      border: none;
+      margin-right: 10px;
+    }
+    .glyphicon.rotate {
+      color: grey;
+      animation: rotate 1s infinite linear;
+    }
+    .glyphicon.success {
+      color: green;
+    }
+  }
+}
+
+//карта
+.b-locations {
+  //карта с метками
+  #js__locations-map {
+    border: 1px solid #ccc;
+    height: 300px;
+    background: #eee;
+  }
+
+  label {
+    padding-top: 5px !important;
+  }
+
+  .note {
+    padding: 15px 15px 15px 15px;
+  }
+
+  .js__locations__fields-wrapper {
+    .js__locations__item {
+      position: relative;
+      //margin-top: 20px;
+      //background: #fff;
+      //border-radius: 10px;
+      //padding: 10px 15px;
+      @extend .clearfix;
+
+      .location_title {
+        font-weight: bold;
+        margin-bottom: 10px;
+        margin-left: 150px;
+      }
+
+      .location-label-container {
+        width: 150px;
+        float: left;
+        padding: 7px 10px 0px 0px;
+
+        div {
+          font-size: 14px;
+          text-align: right;
+          padding: 0px 0px 15px 0px;
+        }
+      }
+
+      .form-group {
+        margin-bottom: 10px;
+        overflow: hidden;
+        padding: 0;
+        border: 0px;
+
+        .location_caption {
+          margin-top: 5px;
+          width: 100%;
+        }
+      }
+
+      .remove {
+        font-size: 16px;
+        position: absolute;
+        top: 12px;
+        right: 15px;
+        color: #666;
+        cursor: pointer;
+        cursor: hand;
+
+        &:hover {
+          color:#8b0000;
+        }
+      }
+
+      .js__item__manually-fields {
+        display: none;
+      }
+
+      &.m-manually {
+        .js__item__automatically-fields {
+          display: none;
+        }
+
+        .js__item__manually-fields {
+          display: block;
+        }
+      }
+
+      &:first-child {
+        margin-top: 10px;
+      }
+
+      &:last-child {
+        .remove {
+          display: none;
+        }
+      }
+    }
+
+    //&.m-no-additional-fields {
+    //  .locations_map_item {
+    //    padding-right: 0px;
+    //  }
+    //}
+  }
+
+  &.m-location-with-list {
+    .location-map-block {
+      background: #333;
+
+      ul.location-locations-list {
+        overflow-y: auto;
+        float: left;
+        width: 260px;
+        height: 300px;
+        padding: 20px 5px 0px 20px;
+        color: #fff;
+
+        li {
+          position: relative;
+          display: block;
+          cursor: pointer;
+          cursor: hand;
+          padding: 0px 0px 20px 10px;
+
+          .glyphicon-map-marker {
+            position: absolute;
+            top:3px;
+            left: -13px;
+          }
+
+          .item-city {
+            font-weight: bold;
+          }
+
+          .item-location {
+            color: #ccc;
+            font-size: 11px;
+          }
+
+          .item-description {
+            font-size: 13px;
+          }
+
+          &.active {
+            //font-weight: bold;
+
+            div, span {
+              color:#f75c54;
+            }
+          }
+        }
+      }
+    }
+
+    #locations_map {
+      margin-left: 200px;
+    }
+  }
+
+  &.m-show-map {
+    margin: 0;
+
+    //карта с метками
+    #js__locations-map {
+      margin-top: 10px;
+      clear: both;
+      display: none;
+    }
+
+    .js__locations-show {
+      border-bottom: 1px dashed;
+      cursor: pointer;
+      float: right;
+      color: #008FD5;
+      font-weight: bold;
+    }
+  }
+}
+
+.p-welcome {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  //padding: 60px 0px;
+  min-height: 600px;
+  background-image: url(/i/admin/bg/bg-3.jpg);
+  background-size: cover;
+
+  .welcome__logo {
+    margin-top: 0px;
+  }
+
+  .welcome__welcome {
+    margin-top: 30px;
+    color: #9e97aa;
+    font-size: 1.5rem;
+  }
+
+  .welcome__title {
+    margin-top: 10px;
+    color: #716aca;
+    font-size: 4rem;
+    text-transform: uppercase;
+  }
+
+  .welcome__url {
+    margin-top: 10px;
+    color: #bbb;
+    font-size: 1.1rem;
+    margin-bottom: 80px;
+  }
+}
+
+//выпадающий селект с тегами
+.b-select2, .select2-container {
+  margin-bottom: 10px;
+
+  .select2-container {
+    width: 100% !important;
+
+    .selection {
+      .select2-selection {
+        border: 1px solid rgba(0,0,0,.15);
+
+        &.select2-selection--multiple {
+          ul {
+            li {
+              font-weight: 300;
+              font-size: 15px;
+              padding: 4px 10px 4px 10px;
+
+              &.select2-selection__choice {
+                max-width: 100%;
+                background: #0b58a2;
+                color: #fff;
+                border-radius: 0;
+                border: 0;
+                vertical-align: middle;
+                display: inline-flex;
+                flex-direction: row-reverse;
+                align-items: flex-end;
+                padding: 4px 10px 9px 10px;
+
+                span.select2-selection__choice__remove {
+                  float: right;
+                  color: #fff;
+                  font-size: 26px;
+                  margin-left: 10px;
+                  line-height: 20px;
+                }
+              }
+
+              &.select2-search {
+
+              }
+            }
+          }
+        }
+
+        &.select2-selection--single {
+          padding: 5px;
+          height: auto;
+        }
+
+        span.select2-selection__arrow {
+          top:50%;
+          transform: translateY(-50%);
+        }
+
+        span.select2-selection__clear {
+          display: none;
+          font-size: 26px;
+          line-height: 20px;
+          margin-top: 14px;
+        }
+      }
+    }
+  }
+
+  .select2-dropdown {
+    ul {
+      li {
+        strong.select2-results__group {
+          font-weight: bold;
+          color: #000;
+        }
+      }
+    }
+  }
+
+  &.select2-container--focus, &.select2-container--open {
+    .selection {
+      .select2-selection {
+        border-color: #80bdff;
+      }
+    }
+  }
+}
+
+//items list and item inner
+.p-main {
+  .form-group {
+    margin-bottom: 20px;
+
+    .control-label {
+      font-weight: bold;
+      color: #716aca;
+    }
+  }
+}
+
+//фикс - панель эдитора вылазит выше хедера
+.note-toolbar {
+  z-index: 100 !important;
+}
+
+//автор статьи
+.b__author {
+  .control-label {
+    .js__change-author {
+      color: #666;
+      font-weight: normal;
+      margin-left: 5px;
+      border-bottom: 1px dashed;
+      cursor: pointer;
+    }
+  }
+
+
+  .author__wrapper {
+    display: flex;
+    align-items: center;
+
+    .author__image {
+      border-radius: 5px;
+      flex-shrink: 0;
+      width: 35px;
+      height: 35px;
+      background-size: cover;
+      margin-right: 10px;
+    }
+
+    .author__name {
+      line-height: 1.2;
+      flex-grow: 1;
+      font-weight: bold;
+    }
+  }
+
+  .author__change {
+    display: none;
+  }
+}
+
+.p-translations {
+  .js__string {
+    border-bottom: 1px dashed;
+    cursor: pointer;
+    color: #5d6cff;
+  }
+}
+
+//фикс - сортировки тегов
+.select2-container .select2-selection--multiple .select2-selection__rendered {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+//url на элемент main
+.m-portlet__url {
+  border-bottom: 1px solid #ebedf2;
+  padding: 8px 2.2rem;
+
+  i {
+    margin-right: 5px;
+  }
+}
+
+//фикс summernote
+.note-toolbar-wrapper {
+  height: auto !important;
+}
+.note-editable {
+  overflow-x: hidden !important;
+}

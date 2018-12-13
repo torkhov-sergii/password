@@ -1,0 +1,44 @@
+footer {
+  background: #293034;
+
+  .container {
+    min-height: $footer-height;
+    padding: 30px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+
+    .block-footer__copyright {
+      //margin-right: auto;
+      color: white;
+      font-size: 14px;
+    }
+
+    .block-footer__made-by {
+      text-align: right;
+      color: white;
+      font-size: 14px;
+    }
+
+    .block-footer__link {
+      color: #ff8400;
+      text-decoration: none;
+    }
+  }
+
+  @media screen and (max-width: $mobile-width) {
+    .container {
+      flex-direction: column;
+
+      .block-footer__copyright {
+        text-align: center;
+      }
+
+      .block-footer__made-by {
+        text-align: center;
+      }
+    }
+  }
+}

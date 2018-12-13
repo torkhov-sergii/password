@@ -1,0 +1,162 @@
+.aside__controls {
+  position: relative;
+  width: 250px;
+  padding: 30px 0px 20px 70px;
+  border-left: 1px solid #e5e5e5;
+  box-sizing: border-box;
+  min-height: 100%;
+
+  .block-share {
+    margin-bottom: 56px;
+  }
+
+  .controls__close {
+    display: none;
+  }
+
+  .controls__type {
+    margin-bottom: 22px;
+
+    .type__title {
+      color: $prozorro-color;
+      font-size: 22px;
+      margin-bottom: 5px;
+    }
+
+    .type__items {
+      .item {
+        position: relative;
+        font-size: 15px;
+        text-decoration: underline;
+        padding: 7px 0;
+        cursor: hand;
+        cursor: pointer;
+
+        &.current, &.active {
+          color: $prozorro-color;
+          //font-size: 14px;
+          //text-transform: uppercase;
+
+          &:after {
+            content: '▶';
+            color: $prozorro-color;
+            position: absolute;
+            left: -12px;
+            top: 9px;
+            font-size: 10px;
+          }
+        }
+
+        @each $type in $document-types {
+          &.#{$type} {
+            position: relative;
+            padding-left: 28px;
+
+            &:before {
+              content: '';
+              position: absolute;
+              left: 0;
+              width: 20px;
+              height: 20px;
+              background: white url('../images/articles/article_type/#{$type}.png') center no-repeat;
+              //background-size: contain;
+            }
+
+            &:after {
+              display: none;
+            }
+          }
+
+          &.document, .presentation {
+            &:before {
+              background-size: contain;
+            }
+          }
+        }
+      }
+    }
+
+    .type__tags {
+      .tags__items {
+        .item {
+          display: inline-block;
+          color: #666666;
+          text-decoration: underline;
+          font-size: 15px;
+          line-height: 30px;
+          cursor: hand;
+          cursor: pointer;
+
+          &.active {
+            color: $prozorro-color;
+          }
+
+          &:after {
+            content: ',';
+            margin-right: 5px;
+          }
+
+          &:last-of-type {
+            &:after {
+              content: '' !important;
+            }
+          }
+        }
+      }
+
+      .tags__more {
+        font-size: 15px;
+        line-height: 30px;
+        padding-bottom: 2px;
+        color: $prozorro-color;
+        text-decoration: underline;
+        text-decoration-style: dotted;
+        cursor: hand;
+        cursor: pointer;
+      }
+    }
+  }
+
+  @media screen and (max-width: $mobile-width-aside) {
+    width: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 100%;
+    padding-left: 0;
+
+    .block-share {
+      display: none;
+    }
+
+    .controls__close {
+      display: block;
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: -30px;
+      width: 100px;
+      margin: 0 auto;
+      padding: 10px 0;
+      font-size: 12px;
+      text-align: center;
+      color: grey;
+      cursor: hand;
+      cursor: pointer;
+    }
+
+    .controls__type {
+      padding: 10px;
+    }
+
+    .controls__type[data-type="tag"] {
+      .type__title {
+        text-align: center;
+      }
+
+      .type__tags {
+        text-align: center;
+      }
+    }
+  }
+}

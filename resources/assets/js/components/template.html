@@ -1,0 +1,48 @@
+<div>
+    <div v-if="type == 'article'">
+        <div class="articles__list">
+            <div v-for="item in items" class="articles__item animated fadeInLeft">
+
+                <div class="item__image">
+                    <a v-bind:href="item.link">
+                        <img class="image__main" v-bind:src="item.img">
+
+                        <div class="image__type" v-bind:class="item.type"></div>
+                    </a>
+                </div>
+
+                <div class="item__body">
+                    <a v-bind:href="item.link" class="body__title">
+                        {{ item.name }}
+                    </a>
+
+                    <div class="info__subtitle">
+                        <span class="subtitle__category">{{ item.category }}</span>
+
+                        <span class="subtitle__date">
+                    {{ item.date }}
+                </span>
+                    </div>
+
+                    <div class="body__annotation">
+                        {{ item.text }}
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="category__empty" v-if="!items.length">
+            нічого не знайдено
+        </div>
+
+        <button
+                v-on:click="loadMore"
+                v-show="page*perPage <= totalItems"
+                class="articles__more-button button button_blue" type='button'>ПОКАЗАТИ БIЛЬШЕ СТАТЕЙ</button>
+    </div>
+
+    <div v-if="type == 'article2'">
+        555
+    </div>
+</div>

@@ -1,0 +1,221 @@
+.block-articles-slider {
+  background: url('../images/articles/bg-1.png');
+  padding-bottom: 60px;
+  padding-top: 40px;
+  //overflow: hidden;
+
+  .container {
+
+  }
+
+  .slider__head {
+    display: flex;
+    flex-wrap: wrap;
+    color: #fff;
+    margin-bottom: 25px;
+    padding: 0 55px;
+
+    .head__title {
+      flex-grow: 1;
+      font-size: 16px;
+      //margin-left: 28px
+    }
+  }
+
+  .slider__container {
+    //width: 90%;
+    margin: 0 auto;
+    padding: 0 50px;
+    box-sizing: border-box;
+
+    .owl-stage {
+      padding: 5px 0;
+    }
+
+    .owl-nav {
+      display: block !important;
+
+      .owl-prev, .owl-next {
+        position: absolute;
+        top: 50%;
+        width: 35px;
+        height: 62px;
+        transform: translateY(-60%);
+      }
+
+      .owl-prev {
+        left: -0px;
+        background: url('../images/articles/nav-left.png') center no-repeat;
+
+        @media screen and (max-width: 1281px) {
+          left: -15px;
+        }
+      }
+
+      .owl-next {
+        right: -0px;
+        background: url('../images/articles/nav-right.png') center no-repeat;
+
+        @media screen and (max-width: 1281px) {
+          right: -15px;
+        }
+      }
+    }
+
+    .slider__item {
+      display: block;
+      position: relative;
+      max-width: 300px;
+      height: 200px;
+      margin: 0 auto;
+      border-radius: 8px;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.7);
+      transition: 0.3s;
+      text-decoration: none;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 5px;
+      }
+
+      .item__category {
+        display: none;
+        z-index: 2;
+        position: absolute;
+        top: 0;
+        padding: 6px 18px;
+        font-family: 'verdana';
+        font-size: 12px;
+        border-top-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+        color: white;
+      }
+
+      .item__info {
+        position: absolute;
+        bottom: 0;
+        background: rgba(255, 255, 255, 0.9);
+        width: 100%;
+        padding: 18px 25px;
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+        box-sizing: border-box;
+
+        .info__title {
+          font-family: 'ubuntu_regular';
+          font-size: 14px;
+          color: #333;
+        }
+
+        .info__date {
+          margin-top: 3px;
+          font-family: 'ubuntu_medium';
+          font-size: 10px;
+          color: rgba(0, 0, 0, 0.8);
+        }
+      }
+
+      &.m-uchasniku {
+        .item__category {
+          display: block;
+          background-color: rgba(92, 145, 64, 0.85);
+        }
+
+        .item__info {
+          .info__title {
+            color: rgb(92, 145, 64);
+          }
+        }
+      }
+
+      &.m-instrukcii {
+        .item__category {
+          display: block;
+          background-color: rgba(145, 84, 88, 0.85);
+        }
+
+        .item__info {
+          .info__title {
+            color: rgb(145, 88, 92);
+          }
+        }
+      }
+
+      &.m-intervyu {
+        .item__category {
+          display: block;
+          background-color: rgba(69, 40, 88, 0.85);
+        }
+
+        .item__info {
+          .info__title {
+            color: rgb(69, 40, 88);
+          }
+        }
+      }
+
+      &.m-gromadskosti {
+        .item__category {
+          display: block;
+          background-color: rgba(241, 122, 11, 0.85);
+        }
+
+        .item__info {
+          .info__title {
+            color: rgb(241, 122, 11);
+          }
+        }
+      }
+
+      &.m-zamovniku {
+        .item__category {
+          display: block;
+          background-color: rgba(83, 117, 128, 0.85);
+        }
+
+        .item__info {
+          .info__title {
+            color: rgb(83, 117, 128);
+          }
+        }
+      }
+
+      &:hover {
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.9);
+        transition: 0.3s;
+      }
+
+      @media screen and (max-width: 490px) {
+        max-width: 270px;
+        height: 200px;
+      }
+    }
+  }
+
+  .slider__empty {
+    text-align: center;
+    color: #fff;
+    font-size: 20px;
+    padding: 10px 0px;
+  }
+
+  @media screen and (max-width: 450px) {
+    padding-bottom: 25px;
+    padding-top: 20px;
+
+    .slider__head {
+      flex-direction: column;
+      align-items: center;
+
+      .head__title {
+        margin-bottom: 20px;
+      }
+    }
+
+    .slider__container {
+      padding: 0;
+    }
+  }
+}

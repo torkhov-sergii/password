@@ -1,0 +1,26 @@
+//main page white with infobox and news
+.block-infobox-news {
+  background: #fff;
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+
+    @media screen and (max-width: $mobile-width) {
+      flex-direction: column;
+      //margin: 0 50px;
+    }
+  }
+
+  @media screen and (min-width: $mobile-width) {
+    &:before {
+      content: '';
+      position: absolute;
+      left: 0;
+      width: 50%;
+      height: 100%;
+      background: #fbfbfb;
+      //z-index: -1;
+    }
+  }
+}

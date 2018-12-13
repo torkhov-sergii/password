@@ -1,0 +1,23 @@
+
+// Fonts
+//@import url("//fonts.googleapis.com/css?family=Open+Sans:400,300,600,700&subset=all");
+@import url("//fonts.googleapis.com/css?family=Poppins:300,400,500,600,700|Roboto:300,400,500,700&subset=cyrillic");
+
+@import '~bootstrap/scss/bootstrap';
+
+//metronic
+@import "../../vendor/metronic_5061/dist/default/assets/vendors/base/vendors.bundle.css";
+@import "../../vendor/metronic_5061/dist/default/assets/demo/default/base/style.bundle.css";
+
+@import '~datatables.net-bs4/css/dataTables.bootstrap4';
+
+//@import '~bootstrap-datepicker/dist/css/bootstrap-datepicker3.standalone'; - error "bootstrap-datepicker3.standalone.css.map"
+//@import "../../vendor/bootstrap-datepicker/bootstrap-datepicker3.standalone";
+
+@import '~jquery-file-upload/css/uploadfile';
+@import '~jquery-jcrop/css/jquery.Jcrop';
+
+//summernote with codemirror
+@import '~summernote/dist/summernote-bs4';
+@import '~codemirror/lib/codemirror';
+@import '~codemirror/theme/monokai';

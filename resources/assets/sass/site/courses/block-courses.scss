@@ -1,0 +1,102 @@
+.block-courses {
+  padding: 40px 50px;
+  //background: rgba(245, 245, 245, 0.35);
+  //margin-right: 311px;
+  box-sizing: border-box;
+
+  .courses__title {
+    text-align: center;
+    font-size: 28px;
+    font-weight: 400;
+    color: #598527;
+  }
+
+  .courses__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    .courses__item {
+      display: block;
+      max-width: 250px;
+      background: white;
+      text-decoration: none;
+      margin: 28px 8px;
+      padding: 30px 20px;
+      box-shadow: 1px 1px 3px #d4d4d4;
+      transition: ease 0.3s;
+      color: #000;
+
+      > div {
+        text-align: center;
+      }
+
+      .item__image {
+        height: 125px;
+
+        img {
+          max-width: 100px;
+          max-height: 80px;
+          margin: 0 auto;
+          object-fit: contain;
+        }
+      }
+
+      .item__title {
+        font-size: 16px;
+        margin-bottom: 5px;
+      }
+
+      .item__for {
+        font-size: 13px;
+        color: #598527;
+        margin-bottom: 10px;
+      }
+
+      .item__text {
+        font-size: 13px;
+        margin-bottom: 10px;
+      }
+
+      .item__duration {
+        font-family: verdana;
+        font-weight: 600;
+        font-size: 12px;
+      }
+
+      &:hover {
+        transition: ease 0.3s;
+        box-shadow: 0px 0px 5px #9b9b9b;
+      }
+
+      &.block-course_fake {
+        height: 0;
+        width: 290px;
+        margin: 0 8px;
+      }
+    }
+  }
+
+  .category__empty {
+    text-align: center;
+    font-weight: bold;
+    padding: 50px 0px 0px 0px;
+  }
+
+  @media screen and (max-width: $mobile-width-aside) {
+    width: 100%;
+    padding: 0px;
+    margin: 0;
+    box-sizing: border-box;
+  }
+
+  @media screen and (max-width: $mobile-width) {
+    .courses__list {
+      .courses__item {
+        .item__image {
+          height: 100px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,87 @@
+.p-course {
+    max-width: 1100px;
+    margin: 0 auto;
+
+    .course__item {
+        padding: 35px 0px 50px 0px;
+
+        .item__title {
+            margin: 0;
+            font-size: 24px;
+            font-weight: 400;
+            color: #598527;
+        }
+
+        .item__wrapper {
+            margin-top: 30px;
+            display: flex;
+
+            .item__body {
+                display: flex;
+                padding-right: 70px;
+
+                .body__image {
+                    margin: 5px 25px 0 0;
+
+                  img {
+                    max-width: 80px;
+                  }
+                }
+
+                .body__text {
+                    font-family: 'verdana';
+                    font-size: 14px;
+
+                    p:first-child {
+                        margin-top: 0;
+                    }
+                }
+            }
+
+            .item__info {
+                .info__details {
+                    font-family: 'verdana';
+                    font-size: 18px;
+
+                    p:first-child {
+                        margin-top: 0;
+                    }
+
+                    > p {
+                        font-size: 14px;
+                    }
+                }
+
+                .info__submit {
+                    margin-top: 30px;
+                }
+            }
+        }
+
+        @media screen and (max-width: $mobile-width) {
+            .item__wrapper {
+                flex-direction: column;
+
+                .item__body {
+                    flex-direction: column;
+                    padding-right: 0px;
+
+                    .body__image {
+                        text-align: center;
+                    }
+
+                    .body__text {
+                        margin-top: 20px;
+                    }
+                }
+
+                .item__info {
+                    text-align: center;
+                    margin-top: 30px;
+                }
+            }
+        }
+    }
+
+}
+

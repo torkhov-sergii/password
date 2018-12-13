@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /
+
+Host: http://infobox-new.prozorro.org
+Sitemap: http://infobox-new.prozorro.org/sitemap.xml

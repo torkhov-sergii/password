@@ -1,0 +1,115 @@
+.p-article, .p-articles {
+  main {
+    display: flex;
+    padding: 40px 40px 50px 90px;
+    background: #fff;
+
+    .content {
+      flex-grow: 1;
+    }
+
+    aside {
+      margin-left: 60px;
+      padding-right: 60px;
+      padding-top: 20px;
+      background: white;
+      animation-duration: 0.2s !important;
+
+      @media screen and (max-width: $mobile-width-aside) {
+        display: none;
+        top: 0;
+        left: 0;
+        right: 0;
+        padding-top: 30px;
+        padding-right: 0;
+        box-shadow: 0 8px 16px -7px rgba(0, 0, 0, 0.3);
+        animation-duration: 0.2s !important;
+        margin-left: 0;
+        position: absolute;
+      }
+
+      &.slideInLeft {
+      }
+    }
+
+    .articles__more-button {
+      display: block;
+      margin: 0 auto;
+      max-width: 350px;
+    }
+
+    @media screen and (max-width: $mobile-width-aside) {
+      width: 100%;
+      padding: 30px;
+      margin: 0;
+      box-sizing: border-box;
+    }
+  }
+
+  //for news
+  &.m-news {
+    main {
+      .content {
+        .block-article {
+          .article__body {
+            .body__head {
+              .head__image {
+                display: none;
+              }
+            }
+
+            .head__info {
+              .info__subtitle {
+                .subtitle__author {
+                  cursor: default;
+                  text-decoration: none;
+                }
+              }
+            }
+
+            .body__text {
+              margin-left: 0;
+            }
+          }
+
+          .article__more {
+            margin-left: 0px;
+          }
+        }
+      }
+    }
+  }
+
+  //for faq
+  &.m-faq {
+    main {
+      .content {
+        .block-article {
+          max-width: 1000px;
+
+          .article__body {
+            .body__head {
+              .head__image {
+                display: none;
+              }
+            }
+
+            .head__info {
+              .info__subtitle {
+                .subtitle__author {
+                  cursor: default;
+                  text-decoration: none;
+                }
+              }
+            }
+
+            .body__text {
+              margin-left: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+

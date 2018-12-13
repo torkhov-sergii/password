@@ -1,0 +1,108 @@
+.block-news {
+  width: 40%;
+  padding: 50px 50px 50px 50px;
+  box-sizing: border-box;
+  background-color: white;
+
+  .block-news__title {
+    color: $prozorro-color;
+    margin-bottom: 74px;
+    font-size: 22px;
+  }
+
+  .block-news__news-wrapper {
+    .block-news-item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 30px;
+      font-family: 'verdana';
+      font-size: 13px;
+      text-decoration: none;
+
+      .block-news-item__image {
+        flex-shrink: 0;
+        margin-right: 30px;
+        width: 90px;
+        height: 70px;
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        //border: 1px solid #f00;
+        //box-shadow: 0 0 3px rgba(0,0,0,0.2);
+      }
+
+      .block-news-item__data {
+        .block-news-item__date {
+          color: $prozorro-color;
+          margin-bottom: 10px;
+        }
+      }
+
+      .block-news-item__preview {
+        color: #333;
+      }
+    }
+  }
+
+  .block-news__link {
+    position: relative;
+    display: block;
+    padding: 4px 0;
+    font-family: 'verdana';
+    font-size: 13px;
+    color: $prozorro-color;
+  }
+
+  &.block-news_laws {
+    width: 30%;
+    border-left: 1px solid rgba(128, 128, 128, 0.271);
+    padding: 10px 50px 0 60px;
+    margin: 30px 0 30px 0;
+
+    .block-news__title {
+      //background: url('../images/MERT-logo.png') left no-repeat;
+      height: 60px;
+      margin-bottom: 50px;
+      margin-left: -3px;
+    }
+
+    //.block-news__news-wrapper_laws {
+    //  .block-news-item {
+    //    display: block;
+    //  }
+    //}
+
+    //@media screen and (max-width: $mobile-width) {
+    //  padding: 0 50px 50px 50px;
+    //}
+  }
+
+  @media screen and (max-width: $mobile-width) {
+    width: 100%;
+    padding: 50px 0;
+
+    .block-news__title {
+      margin-bottom: 40px;
+    }
+
+    .block-news__news-wrapper {
+      .block-news-item {
+        flex-direction: column;
+        align-items: start;
+
+        .block-news-item__image {
+          margin: 0 0 10px 0;
+        }
+      }
+    }
+
+    &.block-news_laws {
+      width: 100%;
+      padding: 50px 0;
+      border: 0;
+      margin: 0;
+    }
+  }
+}
+
+

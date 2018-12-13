@@ -1,0 +1,35 @@
+
+:focus {
+  outline: 0;
+}
+
+.link-to {
+  cursor: hand;
+  cursor: pointer;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+
+  tr {
+    td {
+      border: 1px solid #dee2e6;
+      padding: 0.75rem;
+      vertical-align: top;
+    }
+  }
+}
+
+//youtube
+@media screen and (max-width: $mobile-width) {
+  object {
+    height: 250px   !important;
+  }
+}
+
+h1 {
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+}
